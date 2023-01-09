@@ -1,0 +1,67 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  display: grid;
+  width: 100%;
+  height: 250px;
+  grid-template-areas: "header nav nav"
+ "main main section"
+ "main main section"
+ "footer footer footer";
+  grid-template-rows: 1fr 2fr 2fr 1fr;
+  grid-template-columns: 2fr 2fr 2fr; }
+  body header {
+    grid-area: header;
+    background-color: cyan; }
+  body nav {
+    grid-area: nav;
+    background-color: blue; }
+  body main {
+    grid-area: main;
+    background-color: lightgreen; }
+    body main div p {
+      font-size: 2rem; }
+    body main .consultaClases {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around; }
+      body main .consultaClases a {
+        text-decoration: none; }
+        body main .consultaClases a .consultaDias {
+          background-color: grey;
+          border: 1px solid black;
+          padding: 1rem;
+          text-decoration: none;
+          border-radius: 1rem 1px;
+          color: whitesmoke;
+          font-size: 1.5rem; }
+      body main .consultaClases a {
+        text-decoration: none; }
+        body main .consultaClases a .calcularArancel {
+          background-color: grey;
+          border: 1px solid black;
+          padding: 1rem;
+          text-decoration: none;
+          border-radius: 1rem 1px;
+          color: whitesmoke;
+          font-size: 1.5rem; }
+  body section {
+    grid-area: section;
+    background-color: grey; }
+  body footer {
+    grid-area: footer;
+    background-color: red; }
+  body a {
+    text-decoration: none; }
+    body a .consultaDias {
+      background-color: grey;
+      border: 1px solid black;
+      padding: 1rem;
+      text-decoration: none;
+      border-radius: 1rem 1px;
+      color: whitesmoke;
+      font-size: 1.5rem;
+      text-align: center; }
