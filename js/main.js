@@ -10,8 +10,10 @@ if (esCliente === true){
         alert("recorda que hasta que no lo tengas no podrás acceder al gym")
 }
 }else{
-    console.log("no es cliente")
+    alert("CONOCE TODAS LAS ACTIVIDADES Y ARANCELES")
 }
+
+
 
 
     
