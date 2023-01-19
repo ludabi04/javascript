@@ -32,11 +32,11 @@ if (rutina == 1){
     }
 
 
-const diasSemana = (["Lunes","Martes","Miercoles","Jueves","Viernes","Sabado","Domingo"])
+const diasSemana = ["Lunes","Martes","Miercoles","Jueves","Viernes","Sabado","Domingo"]
 
 let diaElegido = Number(prompt("Elegi el dia de la semana que queres consultar contando como 1 el dia Lunes (solo números), por ejemplo: \n1 - Lunes \n2 - Martes \n3 - Miércoles \n4 - Jueves \n y así....  "))
 
-if(!isNaN(diaElegido) && diaElegido != null && diaElegido != "" && diaElegido <= 7) {
+if(!isNaN(diaElegido) && diaElegido != null && diaElegido != "" && diaElegido <= 7 && diaElegido >=1) {
     switch (diaElegido){
         case 1 : 
             document.write(`Los dias ${diasSemana[diaElegido-1]} tenes </br> </br> -08:00 - Musculacion<br> -09:00 - Zumba </br> -11:00 - Yoga<br> -12:00 - Stretching </br> -14:00 - Aerolocal<br> -16:00 - Aerobox </br> -18:00 - Yoga<br> -20:00 - Stretching `);
