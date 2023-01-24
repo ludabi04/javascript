@@ -66,3 +66,46 @@ if(!isNaN(diaElegido) && diaElegido != null && diaElegido != "" && diaElegido <=
 }
 
 
+const alta = [
+    {nombre: 'Hombros', cantidad: 15, repeticiones: 3}, 
+    {nombre: 'Trapecio', cantidad: 15, repeticiones: 3},
+    {nombre: 'Biceps', cantidad: 15, repeticiones: 3},
+    {nombre: 'Triceps', cantidad: 15, repeticiones: 3},
+]
+
+
+const abdominales = [
+    {nombre: 'Bajos', cantidad: 15, repeticiones: 3}, 
+    {nombre: 'Medios', cantidad: 15, repeticiones: 3},
+    {nombre: 'Oblicuos', cantidad: 15, repeticiones: 3},
+    {nombre: 'Altos', cantidad: 15, repeticiones: 3},
+    {nombre: 'Tabla', cantidad: 15, repeticiones: 3}
+]
+
+const baja = [
+    {nombre: 'cuadriceps', cantidad: 15, repeticiones: 3}, 
+    {nombre: 'gemelos', cantidad: 15, repeticiones: 3},
+    {nombre: 'gluteos', cantidad: 15, repeticiones: 3},
+    {nombre: 'aducotores', cantidad: 15, repeticiones: 3},
+]
+
+
+const zonaAlta = alta.map((el) => el.nombre)
+const media = abdominales.map((el) => el.nombre)
+const zonaBaja = baja.map((el) => el.nombre)
+
+
+let eleccionDeZona = prompt("elegi que zona queres saber entre : ").toUpperCase()
+console.log(eleccionDeZona)
+
+    switch(eleccionDeZona){
+    case "ALTA": 
+    alert(`Se pueden entrenar las siguientes zonas : ${zonaAlta}`);
+    break;
+    case "ABDOMINALES": 
+    alert(`los tipos de abdominales que se pueden hacer son : ${media}`);
+    break;
+    case "BAJA": 
+    alert(`los tipos de abdominales que se pueden hacer son : ${zonaBaja}`);
+    break;
+    }
