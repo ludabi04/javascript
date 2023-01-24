@@ -95,7 +95,7 @@ const media = abdominales.map((el) => el.nombre)
 const zonaBaja = baja.map((el) => el.nombre)
 
 
-let eleccionDeZona = prompt("elegi que zona queres saber entre : ").toUpperCase()
+let eleccionDeZona = prompt("elegi que zona queres saber entre : </br> - ALTA </br> - BAJA </br> - ABDOMINALES ").toUpperCase()
 console.log(eleccionDeZona)
 
     switch(eleccionDeZona){
