@@ -5,8 +5,16 @@ let body = document.body
 let header = document.getElementById("header")
 let nav = document.getElementById("nav")
 let main = document.getElementById("main")
-
 let visualPorDia = document.getElementById("div")
+
+
+
+let botones = ["divBoton","divBoton1", "divBoton2", "divBoton3"]
+
+for (const element of botones) {
+    boton = document.getElementById(element)
+    boton.onclick = () => alert("vas a ser redireccionado")
+}
 
 
 
