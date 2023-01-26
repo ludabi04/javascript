@@ -16,8 +16,18 @@ for (const element of botones) {
     boton.onclick = () => alert("vas a ser redireccionado")
 }
 
+let envioForm = document.getElementById("submit")
+envioForm.addEventListener("click", mensajeEnviado)
+function mensajeEnviado(){
+    console.log("Formulario Enviado");    
+}
 
-
+let enviarNombre = document.getElementById("enviarNombre")
+enviarNombre.addEventListener("click", enviarNombres)
+function enviarNombres(){
+    document.getElementsByClassName("pedirNombre");
+    pedir.className = "displayNone";
+}
 
 if (esCliente === true){
     actividades.innerHTML = `Consulta las actividades que queres ${nombreCliente}`;

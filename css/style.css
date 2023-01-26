@@ -22,7 +22,13 @@
   display: flex;
   flex-direction: column;
 }
+.displayNone {
+  display: none;
+}
 
+.pedirNombre {
+  color: white;
+}
 .fondoAzul {
   background-color: blue;
 }
