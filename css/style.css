@@ -15,6 +15,20 @@
   text-align: center;
 }
 
+.bienvenida {
+  display: flex;
+  flex-direction: column;
+
+}
+
+
+
+.botones {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
 .form {
   padding-top: 1rem;
   margin-bottom: .5rem;
