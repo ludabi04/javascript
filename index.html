@@ -8,13 +8,13 @@
     <script src="./js/main.js" defer></script>
     <title>Inicio</title>
 </head>
-<body>
-    <header id="header" class="">
+<body class="no-cliente">
+    <header id="header" class="no-cliente">
         <div>
             <h1>Bienvenido a Esparta GYM</h1>
         </div>
     </header>
-    <nav id="nav" class="nav">
+    <nav id="nav" class="nav no-cliente">
         <div id="pedir" class="pedirNombre">
             <p>Ingresa tu nombre</p>
             <input type="text" id="ingresarNombre">
@@ -23,26 +23,26 @@
         
     </nav>
 
-    <main id="main" class="consultaClases">
-        <div>
+    <main id="main" class="consultaClases no-cliente">
+        <div class="links">
             <p id="actividades" class="">Consultar actividades:</p>
         </div>
-        <div>
+        <div class="links">
             <a href="./pages/rutinas.html"><div id="divBoton2" class="visualPorDia">Rutinas (Nuevo) </div></a>
             
             <a href="./pages/consultaDias.html"><div id="divBoton1" class="consultaDias">Días</div></a> 
         </div>
         
-        <div>
+        <div class="links">
             <a href="./pages/calcularArancel.html"><div id="divBoton" class="consultaDias click">Calcular arancel</div></a> 
             <a href="./pages/visualPorDia.html"><div id="divBoton3" class="visualPorDia">Valor por Día</div></a>
         </div>
 
 
-        <div id="formulario">
+        <div id="formulario" >
             <p>Dejanos tus datos</p>
-            <input type="name" class="form">
-            <input type="text" class="form">
+            <input type="name" class="form" id="formNombre">
+            <input type="text" class="form" id="formApellido">
             <button id="submit">Enviar</button>
        </div>
       

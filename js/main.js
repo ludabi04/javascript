@@ -18,8 +18,15 @@ for (const element of botones) {
 let envioForm = document.getElementById("submit")
 envioForm.addEventListener("click", mensajeEnviado)
 function mensajeEnviado(){
-    console.log("Formulario Enviado");    
+    let capturarNombre = document.getElementById("formNombre").value;
+    let capturarApellido = document.getElementById("formApellido").value;
+    console.log(capturarApellido, capturarNombre);    
+    let apellidoUsuario = localStorage.setItem(`nombre`, `${capturarNombre}`)
+    // let NombreUsuario = localStorage.setItem(`apellido`, `${capturarApellido}`)
+    // let apellidoGuardado = localStorage.getItem(`${apellidoUsuario}`)
+    console.log(capturarApellido)
 }
+
 
 let enviarNombre = document.getElementById("enviarNombre")
 enviarNombre.addEventListener("click", enviarNombres)
@@ -59,17 +66,10 @@ function enviarNombres(){
 
     
 
-
-
-
-if (document.getElementById("botonSi")=== true){
-    actividades.innerHTML = `Consulta las actividades que queres ${nombreCliente}`;
-    }else{
-    body.className = "no-cliente";
-    header.className = "no-cliente";
-    nav.className = "no-cliente";
-    main.className = "no-cliente";
+const obtenerDatos = () => {
+    console.log(capturarDatos)
 }
+
 
 
 class nuevoUsuario {
@@ -82,5 +82,3 @@ class nuevoUsuario {
   
 }
 
-
-localStorage.setItem(personaNueva)

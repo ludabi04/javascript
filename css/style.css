@@ -21,7 +21,9 @@
 
 }
 
-
+.links {
+  display: none;
+}
 
 .botones {
   display: flex;
@@ -29,10 +31,13 @@
   justify-content: space-around;
 }
 
+#formulario {
+  padding-top: 3rem;
+  text-align: -webkit-center;
+}
+
 .form {
-  padding-top: 1rem;
   margin-bottom: .5rem;
-  height: .5rem;
   display: flex;
   flex-direction: column;
 }
