@@ -8,7 +8,7 @@
     <script src="./js/main.js" defer></script>
     <title>Inicio</title>
 </head>
-<body class="no-cliente">
+<body id="body" class="no-cliente">
     <header id="header" class="no-cliente">
         <div>
             <h1>Bienvenido a Esparta GYM</h1>
@@ -41,8 +41,10 @@
 
         <div id="formulario" >
             <p>Dejanos tus datos</p>
+            <label for="name">Nombre</label>
             <input type="name" class="form" id="formNombre">
-            <input type="text" class="form" id="formApellido">
+            <label for="mail">Mail</label>
+            <input type="email" class="form" id="formMail">
             <button id="submit">Enviar</button>
        </div>
       

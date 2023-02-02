@@ -6,7 +6,6 @@ let nav = document.getElementById("nav")
 let main = document.getElementById("main")
 let visualPorDia = document.getElementById("div")
 
-console.log(ingresarNombre)
 
 let botones = ["divBoton","divBoton1", "divBoton2", "divBoton3"]
 
@@ -19,7 +18,7 @@ let envioForm = document.getElementById("submit")
 envioForm.addEventListener("click", mensajeEnviado)
 function mensajeEnviado(){
     let capturarNombre = document.getElementById("formNombre").value;
-    let capturarApellido = document.getElementById("formApellido").value;
+    let capturarApellido = document.getElementById("formMail").value;
     console.log(capturarApellido, capturarNombre);    
     let apellidoUsuario = localStorage.setItem(`nombre`, `${capturarNombre}`)
     // let NombreUsuario = localStorage.setItem(`apellido`, `${capturarApellido}`)
@@ -30,6 +29,7 @@ function mensajeEnviado(){
 
 let enviarNombre = document.getElementById("enviarNombre")
 enviarNombre.addEventListener("click", enviarNombres)
+
 function enviarNombres(){
     document.getElementsByClassName("pedirNombre");
     let nombre = document.getElementById("ingresarNombre").value;
@@ -44,13 +44,14 @@ function enviarNombres(){
         let clickSiBoton = document.getElementById("botonSi");
         clickSiBoton.addEventListener("click", clickBotonSi);
         function clickBotonSi (){
-        let cambioCliente = document.getElementById("nav");
-        cambioCliente.innerHTML =  `<div>
+            let cambioCliente = document.getElementById("nav");
+            cambioCliente.innerHTML =  `<div>
             <a href="./pages/rutinas.html"><div id="divBoton2" class="visualPorDia">Rutinas (Nuevo) </div></a>
             
             <a href="./pages/consultaDias.html"><div id="divBoton1" class="consultaDias">Días</div></a> 
         </div>`
     }
+    
     let clickNoBoton = document.getElementById("botonNo");
     clickNoBoton.addEventListener("click", clickBotonNo);
     function clickBotonNo () {

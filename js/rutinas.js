@@ -1,18 +1,52 @@
 
+let botonAdelgazar = document.getElementById("botonAdelgazar");
+botonAdelgazar.addEventListener("click", adelgazar);
 
+let botonAgrandar = document.getElementById("botonAgrandar");
+botonAgrandar.addEventListener("click", agrandar);
 
-function Persona(nombre, edad, calle) {
-    this.nombre = nombre;
-    this.edad = edad;
-    this.calle = calle;
-    this.saludar = function(){alert(`Hola ${nombre}, soy Gymi... Tu asesor virtual!  \nBienvendido/a \nAhora que se que tienes ${edad} años te voy a estar haciendo algunas preguntas para conocerte mejor y así poder ayudarte a conocer la mejor rutina...\nCOMENCEMOS `)}   
+function agrandar() {
+    console.log("hiciste")
+    let paraAdelgazar = document.getElementById("bodyRutinas");
+    paraAdelgazar.innerHTML = `
+    <p>Estas son las rutinas</p>
+    <p>press x 2", "prensa x 2", "flexiones x 2</p>
+    <button id="volverAtras"> Volver </button>`
+    
+    let botonVolver = document.getElementById("volverAtras")
+    botonVolver.addEventListener("click", volver)
+    
+    function volver () {
+        let paraAdelgazar = document.getElementById("bodyRutinas");
+        paraAdelgazar.innerHTML = `
+        <h1>Rutinas</h1>
+        <button id="botonAgrandar">Agrandar</button>
+        <button id="botonAdelgazar">Adelagazar</button>
+        <label for="eleccionDia">Elegi el dia que queres consultar</label>
+        <ul>
+            <li ><button id="lunes">Lunes</button></li>
+            <li ><button id="martes">Martes</button></li>
+            <li ><button id ="miercoles">Miercoles</button></li>
+            <li ><button id="jueves">jueves</button></li>
+            <li ><button id ="viernes">Viernes</button></li>
+            <li>Sabado (Cerrado)</li>
+            <li>Domingo (Cerrado</li>
+        </ul>`
+    }
+    
 }
 
-let tuEdad = Number(prompt("Cual es tu edad?"))
-let tuNombre = prompt("Cual es tu nombre ?")
 
-const persona1 = new Persona (tuNombre, tuEdad)
-persona1.saludar()
+
+function adelgazar() {
+    
+    // let paraAdelgazar = document.getElementsByTagName("body");
+    // paraAdelgazar.innerHMTL = `<h1>Rutinas</h1>
+    // <p>Estas son las rutinas</p>
+    // <button id="botonAgrandar">Agrandar</button>
+    // <button id="botonAdelgazar">Adelagazar</button>
+    // `
+}
 
 class Rutinas{
     constructor (hombros, piernas, brazos) {
@@ -20,15 +54,17 @@ class Rutinas{
     this.piernas = piernas;
     this.brazos = brazos;
 }}
-const adelgazar =  new Rutinas ("press x 2", "prensa x 2", "flexiones x 2")
-const agrandar = new Rutinas ("Press Arnold x 3", "Estocadas x 3", "aperturas con mancuerna x 3")
+const adelgazar1 =  new Rutinas ("press x 2", "prensa x 2", "flexiones x 2")
+const agrandar1 = new Rutinas ("Press Arnold x 3", "Estocadas x 3", "aperturas con mancuerna x 3")
+
+
 
 let rutina = prompt("Que tipo de rutina queres conocer? : 1 - Adelgazar 2 - Agrandar")
 
 if (rutina == 1){
     alert(`Genial ${tuNombre} Para ADELGAZAR te recomendamos que hagas la siguiente rutina: \n${adelgazar.hombros}, \n${adelgazar.piernas}, \n${adelgazar.brazos}\n...con esa rutina podes arrancar en tu casa, pero me gustaría que elijas un dia que podes venir a nuestro Gym asi te puedo mostrar cuales son las clases del dia para vos!`) 
     } else {
-        alert(`Genial ${tuNombre} Para AGRANDAR tu musculatura te recomendamos que hagas la siguiente rutina: \n$${agrandar.hombros}, \n$${agrandar.piernas}, \n$${agrandar.brazos}\n$... con esa rutina podes arrancar en tu casa, pero me gustaría que elijas un dia que podes venir a nuestro Gym asi te puedo mostrar cuales son las clases del dia para vos! `)
+        alert(`Genial Para AGRANDAR tu musculatura te recomendamos que hagas la siguiente rutina: \n$${agrandar.hombros}, \n$${agrandar.piernas}, \n$${agrandar.brazos}\n$... con esa rutina podes arrancar en tu casa, pero me gustaría que elijas un dia que podes venir a nuestro Gym asi te puedo mostrar cuales son las clases del dia para vos! `)
     }
 
 
@@ -95,17 +131,17 @@ const media = abdominales.map((el) => el.nombre)
 const zonaBaja = baja.map((el) => el.nombre)
 
 
-let eleccionDeZona = prompt("elegi que zona queres saber entre : \n- ALTA \n- BAJA \n- ABDOMINALES ").toUpperCase()
-console.log(eleccionDeZona)
+// let eleccionDeZona = prompt("elegi que zona queres saber entre : \n- ALTA \n- BAJA \n- ABDOMINALES ")
+// console.log(eleccionDeZona)
 
-    switch(eleccionDeZona){
-    case "ALTA": 
-    alert(`Se pueden entrenar las siguientes zonas : ${zonaAlta}`);
-    break;
-    case "ABDOMINALES": 
-    alert(`los tipos de abdominales que se pueden hacer son : ${media}`);
-    break;
-    case "BAJA": 
-    alert(`los tipos de abdominales que se pueden hacer son : ${zonaBaja}`);
-    break;
-    }
+//     switch(eleccionDeZona){
+//     case "ALTA": 
+//     alert(`Se pueden entrenar las siguientes zonas : ${zonaAlta}`);
+//     break;
+//     case "ABDOMINALES": 
+//     alert(`los tipos de abdominales que se pueden hacer son : ${media}`);
+//     break;
+//     case "BAJA": 
+//     alert(`los tipos de abdominales que se pueden hacer son : ${zonaBaja}`);
+//     break;
+//     }
