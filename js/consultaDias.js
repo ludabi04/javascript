@@ -1,5 +1,5 @@
- let nombre = prompt("Indicanos tu nombre?")
- let diasActividades = prompt("Que día queres venir al gimnasio?").toUpperCase()
+
+let diasActividades = prompt("Que día queres venir al gimnasio?")
  
     if (diasActividades == "LUNES"){
     

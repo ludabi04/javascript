@@ -4,10 +4,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="../js/visualPorDia.js"></script>
+    <script src="../js/visualPorDia.js" defer></script>
+    <link rel="stylesheet" href="../css/style.css">
     <title>Valor por día</title>
 </head>
-<body>
+<body id="body" class="no-cliente">
+
+    <div>
+        <label for="eleccionDia">Elegi el dia que queres consultar</label>
+    <ul id="elegirDia" class=""elegirDia>
+        <li class="diasSemana" id="lunes">Lunes</li>
+        <li class="diasSemana" id="martes">Martes</li>
+        <li class="diasSemana" id ="miercoles">Miercoles</li>
+        <li class="diasSemana" id="jueves">jueves</li>
+        <li class="diasSemana" id ="viernes">Viernes</li>
+        <li>Sabado (Cerrado)</li>
+        <li>Domingo (Cerrado</li>
+    </ul>
+    </div>
     <div>
         <a href="../index.html"><div class="consultaDias">VOLVER A CONSULTA INICIAL</div></a>
     </div>
