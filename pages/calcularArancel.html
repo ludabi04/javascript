@@ -4,10 +4,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="../js/calcularArancel.js"></script>
+    <script src="../js/calcularArancel.js" defer></script>
+    <link rel="stylesheet" href="../css/style.css">
     <title>Calcular Arancel</title>
 </head>
-<body>
+<body id="body" class="no-cliente">
+    <div class="calculoArancel">
+        <label for="dias">Cuantos Dias queres venir al gim en el mes?</label>
+        <input type="text" id="diasParaArancel" class="diasParaArancel">
+        <button id="botonCalcular">Calcular Arancel</button>
+    </div>
+    <div id="arancelCalculado">
+
+    </div>
     <div>
         <a href="../index.html"><div class="consultaDias">VOLVER A CONSULTA INICIAL</div></a>
     </div>

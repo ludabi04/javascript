@@ -1,9 +1,13 @@
-let consulta = Number(prompt("Cuantos días queres venir por semana?"));
+let arancelCalculado = document.getElementById("arancelCalculado")
+let botonCalcular = document.getElementById("botonCalcular")
+botonCalcular.addEventListener("click", calculoArancel)
 
-function cantidadDias () {
-    let resultado = alert("el arancel mensual seria de " + "$" + (consulta*4*210))
+function calculoArancel () {
+    let cantidadDias = document.getElementById("diasParaArancel").value;
+    let resultado = (`${cantidadDias}`* 150)
+    arancelCalculado.innerHTML = `El valor por mes va a ser de : $ ${resultado}`
 }
-cantidadDias();
+
 
 
 

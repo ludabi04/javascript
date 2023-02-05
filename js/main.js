@@ -31,10 +31,14 @@ let enviarNombre = document.getElementById("enviarNombre")
 enviarNombre.addEventListener("click", enviarNombres)
 
 function enviarNombres(){
+    const nombreUsuario = document.getElementById("ingresarNombre").value;
+    localStorage.setItem('usuario', `${nombreUsuario}`);
+    let saludo =  localStorage.getItem(`${nombreUsuario}`);
+    const enJSON    = JSON.stringify(nombreUsuario);
     document.getElementsByClassName("pedirNombre");
     let nombre = document.getElementById("ingresarNombre").value;
     let pedirNombre = document.getElementById("pedir")
-    pedirNombre.innerHTML = `<div class="bienvenida"><p> Hola ${nombre}</p> 
+    pedirNombre.innerHTML = `<div class="bienvenida"><p> Hola ${enJSON}</p> 
         <p>Sos cliente del gimnasio?</p>
         <div class="botones">
         <button id="botonSi" class="botonSi">Si</button>
