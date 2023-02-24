@@ -11,7 +11,7 @@ setTimeout(()=> {
         title: 'PROMO!',
         text: 'Entrá en comprar productos y fijate los precios!',
         icon: 'info',
-        confirmButtonText: 'Acepto'
+        confirmButtonText: 'Allá iré!'
       })
 }, 3000)
 
