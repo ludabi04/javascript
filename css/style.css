@@ -15,6 +15,43 @@
   text-align: center;
 }
 
+#bodyPrecios {
+  background-color: black;
+  color: whitesmoke;
+}
+.listadoProductos {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+  background-color: aqua;
+  
+}
+.botonVolver {
+  background-color: black;
+  font-size: 1.5rem;
+  color: white;
+  text-decoration: none;
+}
+.link {
+  color: whitesmoke;
+}
+
+.encabezado {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.precio-Compra, .titulo-Compra {
+  font-family: 'Courier New', Courier, monospace;
+  color: black;
+  margin: .5rem;
+}
+.verPreciosProd {
+  margin-top: 2rem;
+  font-size: 2.5rem;
+}
+
 .bienvenida {
   display: flex;
   flex-direction: column;

@@ -6,6 +6,14 @@ let nav = document.getElementById("nav")
 let main = document.getElementById("main")
 let visualPorDia = document.getElementById("div")
 
+setTimeout(()=> {
+    Swal.fire({
+        title: 'PROMO!',
+        text: 'Entrá en comprar productos y fijate los precios!',
+        icon: 'info',
+        confirmButtonText: 'Acepto'
+      })
+}, 3000)
 
 let botones = ["divBoton","divBoton1", "divBoton2", "divBoton3"]
 
@@ -53,7 +61,11 @@ function enviarNombres(){
             <a href="./pages/rutinas.html"><div id="divBoton2" class="visualPorDia">Rutinas (Nuevo) </div></a>
             
             <a href="./pages/consultaDias.html"><div id="divBoton1" class="consultaDias">Días</div></a> 
-        </div>`
+        </div>`;
+        Toastify({
+            text: "Que bueno que sos cliente!",
+            duration: 3000
+        }).showToast();
     }
     
     let clickNoBoton = document.getElementById("botonNo");
@@ -63,8 +75,11 @@ function enviarNombres(){
     cambioCliente.innerHTML =  `<div>
     <a href="./pages/calcularArancel.html"><div id="divBoton" class="consultaDias click">Calcular arancel</div></a> 
     <a href="./pages/visualPorDia.html"><div id="divBoton3" class="visualPorDia">Valor por Día</div></a>
-</div>
-`
+</div>`;
+Toastify({
+    text: "Hacete cliente",
+    duration: 3000,
+}).showToast();
 
     }
     }
@@ -74,7 +89,6 @@ function enviarNombres(){
 const obtenerDatos = () => {
     console.log(capturarDatos)
 }
-
 
 
 class nuevoUsuario {
